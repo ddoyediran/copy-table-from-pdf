@@ -13,8 +13,8 @@ df = tabula.read_pdf(pdf_path, pages="1")
 #print(df)
 
 # We can use these 2 methods if we are sure we only have one table on a page
-df[0].to_csv("first_tb") # method 1
+df[0].to_csv("first_tb") # method 1: will create first_tb.csv 
 
-tabula.convert_into(pdf_path, "first_tb_2", output_format="csv", pages="1") # method 1
+tabula.convert_into(pdf_path, "first_tb_2", output_format="csv", pages="1") # method 2: will create first_tb_2.csv 
 
 #print("Dami is working")
