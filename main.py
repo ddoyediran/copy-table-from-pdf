@@ -17,3 +17,12 @@ df[0].to_csv("first_tb") # method 1: will create first_tb.csv
     # Note this will extract all the tables into a single worksheet
 for i in range(len(df)):
     df[i].to_csv(f"page_2_tb{i}.csv") 
+
+
+# To extract all tables from a single pdf
+    # Note this will extract all the tables into a different worksheet
+
+dfs = tabula.read_pdf(pdf_path, pages="all")
+
+for i in range(len(dfs)):
+    dfs[i].to_csv(f"all_pages_tb{i}.csv") 
